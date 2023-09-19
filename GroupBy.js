@@ -171,7 +171,26 @@ let w =
         "characters":"Norrin Radd"
     }
 ]
+console.log('publicadora:');
 console.log
 (
     w.GROUP_BY(n => n.publisher)
+);
+console.log('los mans:')
+console.log
+(
+    w.GROUP_BY
+    (
+        function(n)
+        {
+            if(n.superhero.toLowerCase().includes('man'))
+            {
+                return 'Los supers'
+            }
+            else
+            {
+                return 'Los normales'
+            }
+        }
+    )
 );
